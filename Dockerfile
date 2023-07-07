@@ -28,6 +28,10 @@ COPY package*.json .
 COPY tsconfig*.json .
 RUN npm install
 
+# wait-for-it.sh
+COPY wait-for-it.sh ./
+RUN chmod +x wait-for-it.sh
+
 # Docker Demon Port Mapping
 EXPOSE 3000
 
